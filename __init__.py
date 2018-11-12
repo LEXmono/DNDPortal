@@ -14,8 +14,8 @@ cache = SimpleCache()
 app = Flask(__name__)
 app.secret_key = "development"
 
-TWITCH_CLIENTID = 'qt4d7c961m6qsoq7jma6yzuj2ntgh5'
-TWITCH_SECRET = 'ujlk4ohct1cqsyu7xhjz233o6twnnz'
+TWITCH_CLIENTID = 'CHANGEME'
+TWITCH_SECRET = 'CHANGEME'
 
 # Create table if it doesnt exist already.
 if not Player.exists():
