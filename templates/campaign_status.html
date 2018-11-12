@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+        <div class="container">
+            <div class="row p-2">
+                <div class='col-md-12'>
+                    <h3>{{entries.party_name}}</h3>
+                </div>
+                <div cass='col-md-12'>
+                    <table class="table table-responsive table-striped table-hover w-100 d-block d-md-table">
+                        <tr>
+                            <th scope="col">Character</th>
+                        </tr>
+                        {% for entry in entries.members %}
+                        <tr>
+                            <td>{{ entry.name}}</td>
+                            <td>{{ entry.health }}</td></tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+{% endblock %}

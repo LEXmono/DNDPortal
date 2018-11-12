@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+        <div class="flex-container">
+            <div class="row p-2">
+                <div class='col-md-12'>
+                    <h3>{{entries.party_name}}</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class='col-md-12 table-responsive'>
+                    <table class="table table-striped table-hover w-100 d-block d-md-table">
+                        <tr>
+                            <th class="col-md-6">Character</th>
+                            <th class="col-md-6">Health</th>
+                        </tr>
+                        {% for entry in entries.members %}
+                        <tr class=bg-{{entry.health_status}}>
+                            <td>{{ entry.name}}</td>
+                            <td>{{ entry.health }}%</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+{% endblock %}
